@@ -3,30 +3,28 @@
 using namespace std;
 
 
-typedef enum inout {out = 0, in = 1}
-inout;
-
+typedef enum state {out = 0, in = 1} state;
 
 uint32_t wordCount(string str) {
 
   uint32_t len = str.length();
-  inout marker = in;
+  state st = in;
   int count = 0;
 
   for(int i = 0; i < len; i++) {
-    cout << "i = " << i << " marker is " << marker << endl;
+    cout << "i = " << i << " st is " << st << endl;
 
-    if(marker == in && i == len -1) {
+    if(st == in && i == len -1) {
       count++;
     }
     else if(str[i] != ' ') {
-      marker = in;
+      st = in;
     }
-    else if(str[i] == ' ' && marker == in) {
+    else if(str[i] == ' ' && st == in) {
       count++;
-      marker = out;
+      st = out;
     }
-    else if(marker == in && i == len - 1) {
+    else if(st == in && i == len - 1) {
       cout << "Here" << endl;
       count++; 
     }
@@ -34,7 +32,6 @@ uint32_t wordCount(string str) {
       ;
 
   }
-  
   return count;
 }
 
@@ -44,6 +41,18 @@ uint32_t wordCount2(string str) {
 
   uint32_t len = str.length();
   uint32_t count = 0;
+
+  state st = out;
+  for(int i = 0; i < len; i++) {
+    if(str[i] != ' ' && st == out) {
+      st = in;
+      count++;
+    }
+    else {
+      st = out;
+    }
+  }
+
   return count;
 
 }
