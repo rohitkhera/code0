@@ -48,19 +48,20 @@ uint32_t wordCount2(string str) {
       st = in;
       count++;
     }
-    else {
+    else if(st == in && str[i] == ' '){
       st = out;
     }
+    else
+      ;
   }
 
   return count;
-
 }
 
 
 int main(int argc, char** argv) {
 
-  cout << wordCount("Voila this is a random sample") << endl;
+  cout << wordCount2("Voila this is a random sample") << endl;
 
 }
 
