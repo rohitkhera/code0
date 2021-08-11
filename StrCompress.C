@@ -16,8 +16,11 @@ string compress(string str) {
   string newStr(len,'x');
 
   for(int i = 1; i < len; i++) {
+
     if(lastchar == str[i]) {
       count++;
+      cout << "lastchar " << lastchar << " i = " << i << " count is " << count << endl;
+
     }
     else if(count > 1) {
       newStr[index] = lastchar;
@@ -37,19 +40,16 @@ string compress(string str) {
   return newStr;
 }
 
+/*
 int main(int argc, char** argv) {
 
-  string s0 = compress("aaab"); //2ab
-  string s1 = compress("aabb"); //2a2
+  string s0 = compress("aabc"); //2ab
+  string s1 = compress("aabb"); //2a2b
   cout << s0 << endl;
+  cout << s1 << endl;
   return 0;
+
 }
-  
-/*
-
-  'aaab'
-  i = 2 lastchar = 'a'
-  i = 3 lastchar 'a', count = 3
+*/
   
 
- */

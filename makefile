@@ -31,8 +31,11 @@ SO_EXT=so
 # srcs, hdrs, obs and shared objs
 ############################################
 
-SRC=StrCompress.C
-OBJ=StrCompress.o
+SRC=StrCompress.C \
+	WordCount.C
+
+OBJ=StrCompress.o \
+	WordCount.o
 
 ##############################################
 # shlib targets, exec targets, toplevel targets
