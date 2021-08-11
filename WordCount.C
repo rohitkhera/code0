@@ -58,10 +58,10 @@ uint32_t wordCount2(string str) {
   return count;
 }
 
-
+/*
 int main(int argc, char** argv) {
 
   cout << wordCount2("Voila this is a random sample") << endl;
 
 }
-
+*/

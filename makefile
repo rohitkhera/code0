@@ -32,13 +32,15 @@ SO_EXT=so
 ############################################
 
 SRC=StrCompress.C \
-	WordCount.C
+	WordCount.C \
+	TwoSums.C
 
 OBJ=StrCompress.o \
-	WordCount.o
+	WordCount.o \
+	TwoSums.o
 
 ##############################################
-# shlib targets, exec targets, toplevel targets
+# shlib targets, executable targets
 ##############################################
 
 TARGET = run
@@ -58,8 +60,6 @@ clean:
 ##############################################
 # suffixes
 ##############################################
-
-.SUFFIXES: .java .class
 
 .c.o:
 	$(CC) -c $(CFLAGS) $(RELOC_FLAGS) $<
