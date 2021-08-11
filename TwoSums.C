@@ -21,7 +21,7 @@ vector<int> twosums(vector<int>& list, int target) {
   return indices;
 }
 
-
+/*
 int main(int argc, char** argv) {
 
   vector<int> nums; // [2,7,11,15]
@@ -34,3 +34,4 @@ int main(int argc, char** argv) {
   cout << "indices are " << result[0] << " and " << result[1] << endl;
 
 }
+*/

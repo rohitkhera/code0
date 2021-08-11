@@ -33,11 +33,13 @@ SO_EXT=so
 
 SRC=StrCompress.C \
 	WordCount.C \
-	TwoSums.C
+	TwoSums.C \
+	TwoSumsSorted.C
 
 OBJ=StrCompress.o \
 	WordCount.o \
-	TwoSums.o
+	TwoSums.o \
+	TwoSumsSorted.o
 
 ##############################################
 # shlib targets, executable targets
