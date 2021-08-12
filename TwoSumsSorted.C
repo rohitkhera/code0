@@ -14,7 +14,6 @@ vector<int> twoSumsSorted(vector<int>& nums, int target) {
   int l = 0;
 
   while(l < r) {
-    cout << "l = " << l << " r = " << r << endl;
 
     if(nums[l] + nums[r] == target) {
       cout << "Here " << endl;
