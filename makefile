@@ -56,7 +56,7 @@ $(TARGET): $(OBJ)
 	$(CC) *.o -o $(TARGET) 
 
 # do not use default .c.o suffix rulex for FIPS statically linked exec
-# since default suffixes use the RELOC (-fpic) flag
+# since default suffixes use the RELOC position independent code flag
 
 clean:
 	@rm -rf *.o 
@@ -71,30 +71,11 @@ clean:
 .C.o:
 	$(CC) -c $(CFLAGS) $(RELOC_FLAGS) $<
 
-# do not use default .c.o suffix rulex for FIPS statically linked exec
-
-# since default suffixes use the RELOC (-fpic) flag
-
 
 
 clean:
 	@rm -rf *.o $(TARGET)
 
 
-
-##############################################
-
-# suffixes
-
-##############################################
-
-
-.c.o:
-	$(CC) -c $(CFLAGS) $(RELOC_FLAGS) $<
-
-
-
-.C.o:
-	$(CC) -c $(CFLAGS) $(RELOC_FLAGS) $<
 
 
