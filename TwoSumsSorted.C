@@ -7,7 +7,7 @@ using namespace std;
 
 vector<int> twoSumsSorted(vector<int>& nums, int target) {
 
-  vector<int> indices(2,0);
+  vector<int> indices;
   uint32_t len = nums.size();
   
   int r = len - 1;
@@ -17,6 +17,7 @@ vector<int> twoSumsSorted(vector<int>& nums, int target) {
     cout << "l = " << l << " r = " << r << endl;
 
     if(nums[l] + nums[r] == target) {
+      cout << "Here " << endl;
       indices.push_back(l);
       indices.push_back(r);
       return indices;
@@ -44,7 +45,7 @@ int main(int argc, char** argv) {
   nums.push_back(6);
   nums.push_back(10);
   nums.push_back(45);
-  vector<int> result = twoSumsSorted(nums,26); 
+  vector<int> result = twoSumsSorted(nums,16); 
 
   cout << "indices are " << result[0] << " and " << result[1] << endl;
 
