@@ -35,6 +35,8 @@ vector<int> twoSumsSorted(vector<int>& nums, int target) {
   
 }
 
+/*
+
 int main(int argc, char** argv) {
 
   vector<int> nums; // {-8, 1, 4, 6, 10, 45}
@@ -50,4 +52,5 @@ int main(int argc, char** argv) {
 
 }
 
+*/
 
