@@ -87,11 +87,6 @@ clean:
 ##############################################
 
 
-
-.SUFFIXES: .java .class
-
-
-
 .c.o:
 	$(CC) -c $(CFLAGS) $(RELOC_FLAGS) $<
 

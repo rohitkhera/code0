@@ -24,7 +24,7 @@ vector<int> twosums(vector<int>& list, int target) {
 /*
 int main(int argc, char** argv) {
 
-  vector<int> nums; // [2,7,11,15]
+  vector<int> nums; // [2,3,11,15]
   nums.push_back(2);
   nums.push_back(7);
   nums.push_back(11);
