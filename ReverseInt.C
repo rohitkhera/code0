@@ -1,27 +1,28 @@
 #include <iostream>
 #include <vector>
+#include <math.h>
 
 using namespace std;
 
 int reverseInt(int i) {
 
   vector<int> vec;
-  unsigned int reversed =0;
+  int reversed = 0;
+
   while(i % 10) {
     vec.push_back(i % 10);
     i = i/10;
   }
 
   int sigdigits = vec.size() - 1;
-  cout << "sigdigits is " << sigdigits << endl;
+
   for(int i = 0; i < vec.size(); i++) {
-    cout << vec[i] << endl;
-    cout << "intermediate step is " << vec[i] * (10^sigdigits) << endl;
-    reversed = reversed + (vec[i] * (10^sigdigits));
+    reversed = reversed + (vec[i] * pow(10,sigdigits));
     sigdigits--;
   }
   
   return reversed;
+
 }
 
 
