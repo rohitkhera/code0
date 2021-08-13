@@ -44,10 +44,12 @@ int reverseInt(int i) {
 
 }
 
-
+/*
 
 int main(int argc, char** argv) {
 
   cout << reverseInt(1234) << endl;
 
 }
+
+*/

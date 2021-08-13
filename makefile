@@ -35,13 +35,15 @@ SRC=StrCompress.C \
 	WordCount.C \
 	TwoSums.C \
 	TwoSumsSorted.C \
-	ReverseInt.C
+	ReverseInt.C \
+	PalindromeInt.C
 
 OBJ=StrCompress.o \
 	WordCount.o \
 	TwoSums.o \
 	TwoSumsSorted.o \
-	ReverseInt.o
+	ReverseInt.o \
+	PalindromeInt.o
 
 ##############################################
 # shlib targets, executable targets
