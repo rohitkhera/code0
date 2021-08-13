@@ -1,8 +1,21 @@
 #include <iostream>
 #include <vector>
-#include <math.h>
+#include <cmath>
+#include <climits>
+
 
 using namespace std;
+
+bool uoflow_detected(int lhs, int rhs) {
+
+  if(INT_MAX - lhs <= rhs)
+    return true;
+  if(INT_MIN - lhs >= rhs)
+    return true;
+
+  return false;
+}
+
 
 int reverseInt(int i) {
 
@@ -17,8 +30,14 @@ int reverseInt(int i) {
   int sigdigits = vec.size() - 1;
 
   for(int i = 0; i < vec.size(); i++) {
-    reversed = reversed + (vec[i] * pow(10,sigdigits));
-    sigdigits--;
+
+    int newTerm = (vec[i] * pow(10,sigdigits));
+    if(!uoflow_detected(reversed, newTerm)) {
+      reversed = reversed + newTerm;
+      sigdigits--;
+    }
+    else
+      return reversed;
   }
   
   return reversed;
