@@ -60,8 +60,6 @@ $(TARGET): $(OBJ)
 # do not use default .c.o suffix rulex for FIPS statically linked exec
 # since default suffixes use the RELOC position independent code flag
 
-clean:
-	@rm -rf *.o 
 
 ##############################################
 # suffixes
