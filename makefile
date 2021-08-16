@@ -36,14 +36,16 @@ SRC=StrCompress.C \
 	TwoSums.C \
 	TwoSumsSorted.C \
 	ReverseInt.C \
-	PalindromeInt.C
+	PalindromeInt.C \
+	LongestCommonPrefix.C
 
 OBJ=StrCompress.o \
 	WordCount.o \
 	TwoSums.o \
 	TwoSumsSorted.o \
 	ReverseInt.o \
-	PalindromeInt.o
+	PalindromeInt.o \
+	LongestCommonPrefix.o
 
 ##############################################
 # shlib targets, executable targets
