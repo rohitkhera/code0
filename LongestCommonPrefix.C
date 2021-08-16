@@ -36,7 +36,7 @@ string longestCommonPrefix(vector<string>& strs) {
 }
 
 
-
+/*
 int main(int argc, char** argv) {
 
   vector<string> strs;
@@ -46,3 +46,4 @@ int main(int argc, char** argv) {
   cout << longestCommonPrefix(strs) << endl;
   
 }
+*/
