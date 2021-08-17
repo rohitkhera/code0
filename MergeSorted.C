@@ -16,11 +16,48 @@ class Solution {
 public:
     ListNode* mergeTwoLists(ListNode* l1, ListNode* l2) {
 
-      ListNode *tmp;
-      return tmp;
+      ListNode *runner1 = l1, *runner2 = l2;
+      ListNode *current = NULL;
+      ListNode *head = NULL;
+
+      int i = 0;
+      while(runner1 != NULL && runner2 != NULL) {
+
+	if(current)
+	  cout << "Current Val " << current->val << endl;
+	if(runner1->val <= runner2->val) {
+	  if(current == NULL) { 
+	    current = runner1;
+	    head = runner1;
+	    cout << "head1" << endl;
+	  }
+	  else
+	    current->next = runner1;
+	  cout << "Increment runner 1 " << endl;
+	  runner1 = runner1->next;
+	  current = current->next;
+	}
+	else {
+	  if(current == NULL) {
+	    current = runner2;
+	    head = runner2;
+	    cout << "head2" << endl;
+	  }
+	  else
+	    current->next = runner2;
+	  cout << "increment runner 2" << endl;
+	  runner2 = runner2->next;
+	  current = current->next;
+	}
+
+	if(i == 7) break;
+	i++;
+	cout << endl;
+      }
+
+      return head;
     }
 };
-
 
 void print(ListNode *head) {
 
@@ -30,7 +67,6 @@ void print(ListNode *head) {
   }
 
 }
-
 
 int main(int argc, char** argv) {
 
@@ -47,4 +83,7 @@ int main(int argc, char** argv) {
 
   print(&l2_1);
 
+  cout << "Solution" << endl;
+  Solution s;
+  s.mergeTwoLists(&l1_1, &l2_1);
 }
