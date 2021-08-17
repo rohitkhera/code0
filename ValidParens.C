@@ -5,30 +5,48 @@ using namespace std;
 
 bool isValid(string s) {
 
-  bool valid = false;
   const unsigned int len = s.length();
   vector<char> stack;
-  char last_open;
   
   for(int i = 0; i < len; i++) {
     if(s[i] == '{' || s[i] == '(' || s[i] == '[') {
       stack.push_back(s[i]);
-      last_open = s[i];
     }
     else if(s[i] == '}' || s[i] == ')' || s[i] == ']') {
-      if(stack.pop_back() != s[i])
+
+      if(stack.size() == 0)
 	return false;
+      char c = stack.back();
+      switch(s[i]) {
+      case ')':
+	if(c != '(')
+	  return false;
+	break;
+      case '}':
+	if(c != '{')
+	  return false;
+	break;
+      case ']':
+	if(c != '[')
+	  return false;
+	break;
+      default:
+	break;
+      }
+
+      stack.pop_back();
     }
 
   }
   
-  return valid;
-  
+  return stack.size() == 0;
 }
 
 
 int main(int argc, char** argv) {
 
+  cout << "Is valid " << isValid("{ ( [ ] ) ) ()") << endl;
   cout << "Is valid " << isValid("{ ( [ ] ) } ()") << endl;
+  cout << "Is valid " << isValid("]") << endl;
 
 }
