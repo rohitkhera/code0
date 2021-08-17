@@ -67,7 +67,7 @@ void print(ListNode *head) {
   }
 
 }
-
+/*
 int main(int argc, char** argv) {
 
   ListNode l1_3(4, NULL);
@@ -87,3 +87,4 @@ int main(int argc, char** argv) {
   Solution s;
   s.mergeTwoLists(&l1_1, &l2_1);
 }
+*/
