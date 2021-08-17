@@ -38,7 +38,8 @@ SRC=StrCompress.C \
 	ReverseInt.C \
 	PalindromeInt.C \
 	LongestCommonPrefix.C \
-	ValidParens.C
+	ValidParens.C \
+	MergeSorted.C
 
 OBJ=StrCompress.o \
 	WordCount.o \
@@ -47,7 +48,8 @@ OBJ=StrCompress.o \
 	ReverseInt.o \
 	PalindromeInt.o \
 	LongestCommonPrefix.o \
-	ValidParens.o
+	ValidParens.o \
+	MergeSorted.o
 
 ##############################################
 # shlib targets, executable targets

@@ -42,7 +42,7 @@ bool isValid(string s) {
   return stack.size() == 0;
 }
 
-
+/*
 int main(int argc, char** argv) {
 
   cout << "Is valid " << isValid("{ ( [ ] ) ) ()") << endl;
@@ -50,3 +50,4 @@ int main(int argc, char** argv) {
   cout << "Is valid " << isValid("]") << endl;
 
 }
+*/
