@@ -43,6 +43,18 @@ public:
 
 };
 
+
+class Solution2 {
+ public:
+  int removeDuplicates(vector<int>& nums) {
+
+    return 0;
+  }
+
+};
+
+
+
 int main(int argc, char **argv) {
 
 
