@@ -49,18 +49,20 @@ class Solution2 {
   vector<int>  removeDuplicates(vector<int>& nums) {
 
     vector<int> dedup;
-    int index = 0;
-    for(int i = 0; i < dedup.size() - 1; i++) {
-      dedup.push_back(nums[index]);
-      index++;
-
-      for(int j = i + 1; j < dedup.size(); j++) {
+    int i = 0;
+    while(i < nums.size() - 1) {
+      dedup.push_back(nums[i]);
+      cout << "i top " << i << endl;
+      bool signal = false;
+      for(int j = i + 1; j < nums.size(); j++) {
+	if(signal)
+	  break;
 	if(nums[i] != nums[j]) {
 	  i = j;
-	  break;
+	  signal = true;
 	}
       }
-
+      ++i;
     }
     return dedup;
   }
