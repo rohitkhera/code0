@@ -3,7 +3,7 @@
 
 using namespace std;
 
-// 1 1 1 2 3 
+// 1 1 1 2 2 
 
 void move_array(int a, int b, vector<int>& nums) {
 
@@ -46,9 +46,23 @@ public:
 
 class Solution2 {
  public:
-  int removeDuplicates(vector<int>& nums) {
+  vector<int>  removeDuplicates(vector<int>& nums) {
 
-    return 0;
+    vector<int> dedup;
+    int index = 0;
+    for(int i = 0; i < dedup.size() - 1; i++) {
+      dedup.push_back(nums[index]);
+      index++;
+
+      for(int j = i + 1; j < dedup.size(); j++) {
+	if(nums[i] != nums[j]) {
+	  i = j;
+	  break;
+	}
+      }
+
+    }
+    return dedup;
   }
 
 };
@@ -59,6 +73,7 @@ int main(int argc, char **argv) {
 
 
   vector<int> nums;
+
   nums.push_back(1);
   nums.push_back(1);
   nums.push_back(1);
@@ -69,9 +84,10 @@ int main(int argc, char **argv) {
 
   print(nums);
   cout << endl;
-  Solution s;
-  s.removeDuplicates(nums);
-  print(nums);
+  Solution2 s;
+  vector<int> dedup = s.removeDuplicates(nums);
+  print(dedup);
+
   
   return 0;
 
