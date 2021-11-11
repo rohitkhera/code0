@@ -7,7 +7,7 @@ CC=g++
 
 #ARCH_FLAGS=-m32
 
-CFLAGS=$(ARCH_FLAGS) $(INCLUDES) $(JNI_INCLUDES) $(JNI_INCLUDES_MD) $(DEBUG_FLAGS)  $(LOG_LEVEL_FLAGS)
+CFLAGS=-g $(ARCH_FLAGS) $(INCLUDES) $(JNI_INCLUDES) $(JNI_INCLUDES_MD) $(DEBUG_FLAGS)  $(LOG_LEVEL_FLAGS)
 
 #LD_VERBOSE=-v
 
@@ -31,6 +31,8 @@ SO_EXT=so
 # srcs, hdrs, obs and shared objs
 ############################################
 
+CUR_MAIN=RemoveElement
+
 SRC=StrCompress.C \
 	WordCount.C \
 	TwoSums.C \
@@ -40,7 +42,9 @@ SRC=StrCompress.C \
 	LongestCommonPrefix.C \
 	ValidParens.C \
 	MergeSorted.C \
-	RemoveDupsSorted.C
+	RemoveDupsSorted.C \
+	RemoveElement.C \
+	StrStr.C
 
 OBJ=StrCompress.o \
 	WordCount.o \
@@ -51,7 +55,10 @@ OBJ=StrCompress.o \
 	LongestCommonPrefix.o \
 	ValidParens.o \
 	MergeSorted.o \
-	RemoveDupsSorted.o
+	RemoveDupsSorted.o \
+	RemoveElement.o \
+	StrStr.o
+
 
 ##############################################
 # shlib targets, executable targets
